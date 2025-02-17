@@ -1,0 +1,8 @@
+dialog {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+button {
+    margin-top: 10px;
+}
