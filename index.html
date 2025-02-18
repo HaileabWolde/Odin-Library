@@ -8,12 +8,22 @@
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to the Dialog Example</h1>
+  <div class="container">
     <button id="openDialog">Open Dialog</button>
-
     <dialog id="myDialog">
-        <p>This is a native dialog box!</p>
-        <button id="closeDialog">Close Dialog</button>
+        <form action="" method="" id="myform">
+          <h1>Add New Book</h1>
+          <label for="title">Title:</label>
+          <input type="text" id="title" placeholder="Title" name="title">
+          <label for="author">Last Name:</label>
+          <input type="text" id="author" placeholder="Author" name="author">
+          <label for="total">Total Pages:</label>
+          <input type="number" id="total" placeholder="Total Pages" name="total">
+          <label for="completed">Completed Pages:</label>
+          <input type="number" id="completed" placeholder="Completed Pages" name="completed">
+          <button id="closeDialog">Close Dialog</button>
+        </form>
     </dialog>
+  </div>
 </body>
 </html>
