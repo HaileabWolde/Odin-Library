@@ -12,16 +12,17 @@
     <button id="openDialog">Open Dialog</button>
     <dialog id="myDialog">
         <form action="" method="" id="myform">
-          <h1>Add New Book</h1>
-          <label for="title">Title:</label>
+          <h1>Add New Book</h1>  
           <input type="text" id="title" placeholder="Title" name="title">
-          <label for="author">Last Name:</label>
           <input type="text" id="author" placeholder="Author" name="author">
-          <label for="total">Total Pages:</label>
+          <span id="authorError"></span>
           <input type="number" id="total" placeholder="Total Pages" name="total">
-          <label for="completed">Completed Pages:</label>
           <input type="number" id="completed" placeholder="Completed Pages" name="completed">
-          <button id="closeDialog">Close Dialog</button>
+          <span id="pageError"></span>
+          <div class="buttons">
+            <button id="addBook">Add Book</button>
+            <button id="closeDialog">Cancel</button>
+          </div>
         </form>
     </dialog>
   </div>

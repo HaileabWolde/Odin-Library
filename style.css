@@ -9,7 +9,7 @@
 dialog {
     padding: 20px;
     border: 2px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px;
     align-self: center;
     justify-self: center;
     height: 70%;
@@ -21,7 +21,7 @@ form{
     flex-direction: column;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 0.5rem;
 }
 input{
@@ -37,4 +37,20 @@ input{
 }
 #closeDialog{
     justify-self: end;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.buttons>
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #54ACDB;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    width: 45%;
 }
