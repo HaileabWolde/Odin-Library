@@ -9,22 +9,37 @@
 </head>
 <body>
   <div class="container">
-    <button id="openDialog">Open Dialog</button>
-    <dialog id="myDialog">
-        <form action="" method="" id="myform">
-          <h1>Add New Book</h1>  
-          <input type="text" id="title" placeholder="Title" name="title">
-          <input type="text" id="author" placeholder="Author" name="author">
-          <span id="authorError"></span>
-          <input type="number" id="total" placeholder="Total Pages" name="total">
-          <input type="number" id="completed" placeholder="Completed Pages" name="completed">
-          <span id="pageError"></span>
-          <div class="buttons">
-            <button id="addBook">Add Book</button>
-            <button id="closeDialog">Cancel</button>
-          </div>
+    <div class="header">
+      <h1 class="odin">Odin Library</h1>
+      <img src="./Odin-One.png" alt="OdinPic">
+    </div>
+    <div class="mainContainer">
+     <div class="books">
+      <div class="bookcard">
+        <span id="openDialog">+</span>
+         <dialog id="myDialog">
+             <form action="" method="" id="myform">
+                <h2>Add New Book</h2>  
+                <input type="text" id="title" placeholder="Title" name="title">
+                <input type="text" id="author" placeholder="Author" name="author">
+                 <span id="authorError"></span>
+                <input type="number" id="total" placeholder="Total Pages" name="total">
+                <input type="number" id="completed" placeholder="Completed Pages" name="completed">
+                <span id="pageError"></span>
+                <p>Have Your Read This Book?</p>
+                <input type="checkbox" id="read">
+                <label for="read" id="readLabel">
+               </label>
+               <div class="buttons">
+                <button id="addBook">Add Book</button>
+                <button id="closeDialog">Cancel</button>
+              </div>
         </form>
     </dialog>
+      </div> 
+     </div>
+     <div class="booksInfo"></div>
+    </div> 
   </div>
 </body>
 </html>

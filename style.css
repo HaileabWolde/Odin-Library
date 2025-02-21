@@ -3,8 +3,25 @@
     margin: 0;
     padding: 0;
 }
-.container{
-    min-height: 100vh;
+.odin{
+    font-family: 'Odibee Sans', cursive;
+    color: white;
+}
+.header{
+    position: sticky;
+    top: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(48, 30, 103);
+}
+.header>img{
+    height: 70%;
+    width: 10%;
 }
 dialog {
     padding: 20px;
@@ -35,6 +52,12 @@ input{
     outline: none;
     width: 90%;
 }
+input[type="checkbox"]#read{
+    opacity: 0;
+    position: absolute;
+    left: -1000px;
+    top: -10000px;
+}
 #closeDialog{
     justify-self: end;
 }
@@ -54,3 +77,84 @@ button{
     outline: none;
     width: 45%;
 }
+#readLabel{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    align-items: center;
+}
+#readLabel::after{
+    content: ''; /* Default: X (Not Read) */
+    position: absolute;  
+    left: 0.2em;
+    background-color: red;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+#readLabel::before{
+    content: '';
+    border: 2px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: 1em;
+    width: 3em;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+
+}
+#read:checked + #readLabel::after{
+    content: '✔'; /* Change to Checkmark */
+    display: flex;
+    align-items: center;
+    background-color: #54ACDB;
+    left: 2em;
+}
+#read:checked + #readLabel::before {
+    background-color: green;
+}
+.mainContainer{
+    min-height: calc(100vh - 20vh);
+    background-color: #03001C;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: 70% 30%;
+}
+.books{
+    min-height: 100%;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2em;
+    gap: 0.5em;
+}
+.booksInfo{
+    background-color: rgba(66, 66, 66, 0.95);
+    grid-row-start: 1;
+    grid-row-end: 11;
+}
+
+.bookcard{
+    background-color: rgba(25, 88, 56, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    height: 15em;
+    width: 15em;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#openDialog{
+    justify-self: center;
+    align-self: center;
+    font-size: 200px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/*rgba(66, 66, 66, 0.95); rgba(0, 0, 0, 0.87);*/
