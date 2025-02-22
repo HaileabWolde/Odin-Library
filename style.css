@@ -148,13 +148,12 @@ button{
     align-items: center;
     justify-content: center;
 }
-#openDialog{
+.openDialog{
     justify-self: center;
     align-self: center;
     font-size: 200px;
     cursor: pointer;
     color: white;
 }
-
 
 /*rgba(66, 66, 66, 0.95); rgba(0, 0, 0, 0.87);*/
